@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://c7v2m4fdpg64p"]
+
+[ext_resource type="Texture2D" uid="uid://5cmsyhdqx8md" path="res://texturas_y_materiales/plastered_wall_05_1k/textures/plastered_wall_05_diff_1k.png" id="1_nlao5"]
+[ext_resource type="Texture2D" uid="uid://b1kx2pncqvwcw" path="res://texturas_y_materiales/plastered_wall_05_1k/textures/plastered_wall_05_ao_1k.png" id="2_xk727"]
+[ext_resource type="Texture2D" uid="uid://dcvyglgqiglhe" path="res://texturas_y_materiales/plastered_wall_05_1k/textures/plastered_wall_05_disp_1k.png" id="3_5xxlq"]
+[ext_resource type="Texture2D" uid="uid://d0yso6ilwxkou" path="res://texturas_y_materiales/plastered_wall_05_1k/textures/plastered_wall_05_nor_gl_1k.png" id="4_bcsby"]
+[ext_resource type="Texture2D" uid="uid://dkl4hsohbnyru" path="res://texturas_y_materiales/plastered_wall_05_1k/textures/plastered_wall_05_rough_1k.png" id="5_3qxw0"]
+
+[resource]
+albedo_texture = ExtResource("1_nlao5")
+roughness_texture = ExtResource("5_3qxw0")
+normal_enabled = true
+normal_texture = ExtResource("4_bcsby")
+ao_enabled = true
+ao_texture = ExtResource("2_xk727")
+heightmap_enabled = true
+heightmap_scale = 0.0
+heightmap_texture = ExtResource("3_5xxlq")
+uv1_scale = Vector3(7.26, 0.17, 30)
+uv1_triplanar = true

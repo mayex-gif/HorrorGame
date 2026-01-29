@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d16slsjtkuobk"]
+
+[ext_resource type="PackedScene" uid="uid://4k10k285bxrr" path="res://glb_models/muebles/Set of pictures.glb" id="1_43op1"]
+[ext_resource type="Material" uid="uid://cougfivd12src" path="res://texturas_y_materiales/set_of_pictures.tres" id="2_r1p24"]
+
+[node name="Set of pictures2" instance=ExtResource("1_43op1")]
+
+[node name="Cube_002" parent="Set of pictures" index="0"]
+material_override = ExtResource("2_r1p24")

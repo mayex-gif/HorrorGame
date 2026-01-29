@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6hmojd1m6hft"]
+
+[ext_resource type="Material" uid="uid://lc7b2afptd3k" path="res://texturas_y_materiales/dark_wood_1k/textures/dark_wood_1k.tres" id="1_1b2to"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hebrv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_njc1x"]
+size = Vector3(3.1538315, 1.1433105, 1.6623502)
+
+[node name="mesa" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.25, 0, 0, 0, 0.1, 0, 0, 0, 1.75, 0, 0, 0)
+material_override = ExtResource("1_1b2to")
+mesh = SubResource("BoxMesh_hebrv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.25, -1.45, -0.6, 0.7)
+material_override = ExtResource("1_1b2to")
+mesh = SubResource("BoxMesh_hebrv")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.25, 1.45, -0.6, 0.7)
+material_override = ExtResource("1_1b2to")
+mesh = SubResource("BoxMesh_hebrv")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.25, -1.45, -0.6, -0.7)
+material_override = ExtResource("1_1b2to")
+mesh = SubResource("BoxMesh_hebrv")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.25, 1.45, -0.6, -0.7)
+material_override = ExtResource("1_1b2to")
+mesh = SubResource("BoxMesh_hebrv")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.2, 0, 0, 0, 0.1, 0, 0, 0, 1.7, 0, -0.05, 0)
+material_override = ExtResource("1_1b2to")
+mesh = SubResource("BoxMesh_hebrv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0011940002, -0.5193604, -0.004352808)
+shape = SubResource("BoxShape3D_njc1x")

@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dmsaf5uxlvkdh"]
+
+[ext_resource type="Script" uid="uid://ber4aeqowenyd" path="res://jugador/jugador.gd" id="1_feffl"]
+[ext_resource type="Script" uid="uid://cmopin2yogvnk" path="res://jugador/fp_cam.gd" id="2_ug00j"]
+[ext_resource type="Script" uid="uid://d1y4g2ssg63n4" path="res://scripts/jugador_interaccion.gd" id="3_sx3nn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gthio"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gthio"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_im34r"]
+bg_color = Color(0.86, 0.86, 0.86, 0.6745098)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="Jugador" type="CharacterBody3D" unique_id=459916517]
+script = ExtResource("1_feffl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=558247350]
+shape = SubResource("CapsuleShape3D_gthio")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1849455958]
+mesh = SubResource("CapsuleMesh_gthio")
+
+[node name="Cabeza" type="Node3D" parent="." unique_id=1806555265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7273965, 0)
+script = ExtResource("2_ug00j")
+
+[node name="Camera3D" type="Camera3D" parent="Cabeza" unique_id=1726565832]
+
+[node name="RayCast3D" type="RayCast3D" parent="Cabeza" unique_id=1072499919]
+transform = Transform3D(1.5, 0, 0, 0, -6.556708e-08, -1.5, 0, 1.5, -6.556708e-08, 0, 0, 0)
+target_position = Vector3(0, -2, 0)
+script = ExtResource("3_sx3nn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=28853390]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=1022640507]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MiraAnchor" type="Control" parent="CanvasLayer/CenterContainer" unique_id=677437424]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/CenterContainer/MiraAnchor" unique_id=270106538]
+custom_minimum_size = Vector2(6, 6)
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = 3.0
+pivot_offset = Vector2(3, 3)
+theme_override_styles/panel = SubResource("StyleBoxFlat_im34r")

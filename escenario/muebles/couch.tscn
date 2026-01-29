@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwntuyi7vgwaj"]
+
+[ext_resource type="PackedScene" uid="uid://cwhg5am6tgje5" path="res://glb_models/muebles/couch.glb" id="1_t0eiy"]
+[ext_resource type="Material" uid="uid://b2a64e56gwd2b" path="res://texturas_y_materiales/rough_linen_1k/textures/rough_linen_1k.tres" id="2_fnfxs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t0eiy"]
+size = Vector3(3.9761658, 0.65515137, 1.2838135)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fnfxs"]
+size = Vector3(1.0684814, 0.42007446, 1.7519836)
+
+[node name="couch" instance=ExtResource("1_t0eiy")]
+transform = Transform3D(-1, 0, 0, 0, 1, -8.742278e-08, 0, 8.742278e-08, 1, 0, 0, 0)
+
+[node name="Porter Sectional - 2 Seater Frame" parent="." index="0"]
+material_override = ExtResource("2_fnfxs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011930823, 0.3534546, -0.29255843)
+shape = SubResource("BoxShape3D_t0eiy")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.094632, 0.23506165, 0.37599182)
+shape = SubResource("BoxShape3D_fnfxs")

@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://bqw074yx8gqdg"]
+
+[ext_resource type="Texture2D" uid="uid://05pemrh5575g" path="res://texturas_y_materiales/brown_floor_tiles_1k/textures/brown_floor_tiles_diff_1k.png" id="1_lxg5v"]
+[ext_resource type="Texture2D" uid="uid://2qydu5spvo5y" path="res://texturas_y_materiales/brown_floor_tiles_1k/textures/brown_floor_tiles_ao_1k.png" id="2_jbyiw"]
+[ext_resource type="Texture2D" uid="uid://p8lr81ujaexv" path="res://texturas_y_materiales/brown_floor_tiles_1k/textures/brown_floor_tiles_disp_1k.png" id="3_khegi"]
+[ext_resource type="Texture2D" uid="uid://cex2uluyposyi" path="res://texturas_y_materiales/brown_floor_tiles_1k/textures/brown_floor_tiles_nor_gl_1k.png" id="4_sbpp3"]
+[ext_resource type="Texture2D" uid="uid://cklhiit3pmql0" path="res://texturas_y_materiales/brown_floor_tiles_1k/textures/brown_floor_tiles_rough_1k.png" id="5_fea50"]
+
+[resource]
+albedo_texture = ExtResource("1_lxg5v")
+roughness = 0.95
+roughness_texture = ExtResource("5_fea50")
+normal_enabled = true
+normal_scale = -10.0
+normal_texture = ExtResource("4_sbpp3")
+ao_enabled = true
+ao_texture = ExtResource("2_jbyiw")
+heightmap_enabled = true
+heightmap_scale = 0.0
+heightmap_texture = ExtResource("3_khegi")
+uv1_scale = Vector3(8.015, 8.015, 8.015)

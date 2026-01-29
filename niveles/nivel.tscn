@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://d2inxxshscux"]
+
+[ext_resource type="Texture2D" uid="uid://cylvld25utgnh" path="res://icon.svg" id="1_i5347"]
+[ext_resource type="PackedScene" uid="uid://dmsaf5uxlvkdh" path="res://jugador/jugador.tscn" id="2_ru27n"]
+[ext_resource type="PackedScene" uid="uid://c0dhd842h7xrd" path="res://escenario/casa.tscn" id="3_aeujy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ru27n"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_aeujy"]
+sky_material = SubResource("ProceduralSkyMaterial_ru27n")
+
+[sub_resource type="Environment" id="Environment_k2w8l"]
+background_mode = 2
+sky = SubResource("Sky_aeujy")
+tonemap_mode = 2
+ssao_enabled = true
+ssao_intensity = 2.5
+ssil_enabled = true
+ssil_radius = 0.01
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_cascades = 5
+sdfgi_min_cell_size = 0.3
+sdfgi_y_scale = 0
+sdfgi_normal_bias = 1.5
+fog_mode = 1
+fog_density = 1.0
+fog_sky_affect = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7inyx"]
+size = Vector3(15, 1, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ru27n"]
+albedo_texture = ExtResource("1_i5347")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i5347"]
+
+[node name="Nivel" type="Node3D" unique_id=80206155]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=473064322]
+environment = SubResource("Environment_k2w8l")
+
+[node name="Suelo" type="StaticBody3D" parent="." unique_id=775122913]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Suelo" unique_id=1446887699]
+shape = SubResource("BoxShape3D_7inyx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Suelo" unique_id=318594745]
+transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_ru27n")
+mesh = SubResource("BoxMesh_i5347")
+
+[node name="Jugador" parent="." unique_id=1389640630 instance=ExtResource("2_ru27n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=145318222]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 25, 0)
+shadow_enabled = true
+
+[node name="Casa" parent="." unique_id=2084981635 instance=ExtResource("3_aeujy")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.0116792, 2.300001, -20.593107)

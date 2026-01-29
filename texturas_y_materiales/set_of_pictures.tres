@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cougfivd12src"]
+
+[ext_resource type="Texture2D" uid="uid://cw33lvaqp44n5" path="res://glb_models/muebles/Set of pictures_conifers-1836582.jpg" id="1_vdypf"]
+[ext_resource type="Texture2D" uid="uid://c7x7t8l65jjom" path="res://glb_models/muebles/Set of pictures_GWC deckchair Canvas 02_Normal.jpg" id="2_hskjg"]
+[ext_resource type="Texture2D" uid="uid://cdl8nfc1ubyti" path="res://glb_models/muebles/Set of pictures_GWC deckchair Canvas 02_Metallic-GWC deckchair Canvas 02_Roughness.png" id="3_tnutx"]
+
+[resource]
+albedo_texture = ExtResource("1_vdypf")
+roughness_texture = ExtResource("3_tnutx")
+normal_enabled = true
+normal_texture = ExtResource("2_hskjg")
+uv1_scale = Vector3(1, 1.75, 1)
+uv1_offset = Vector3(0.185, 0.5, 0)
+uv1_triplanar = true

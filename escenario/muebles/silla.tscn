@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://b76akhv7k00b5"]
+
+[ext_resource type="Script" uid="uid://bbrn5vephifqm" path="res://scripts/silla.gd" id="1_4hg5e"]
+[ext_resource type="Material" uid="uid://lc7b2afptd3k" path="res://texturas_y_materiales/dark_wood_1k/textures/dark_wood_1k.tres" id="1_gknmx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qnjkh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ixev"]
+size = Vector3(0.7494812, 1.5026245, 0.7828369)
+
+[sub_resource type="Animation" id="Animation_ps42c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bisagra:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4hg5e"]
+resource_name = "abrir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bisagra:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_83mlf"]
+resource_name = "cerrar"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bisagra:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.5), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_omg4a"]
+_data = {
+&"RESET": SubResource("Animation_ps42c"),
+&"abrir": SubResource("Animation_4hg5e"),
+&"cerrar": SubResource("Animation_83mlf")
+}
+
+[node name="silla" type="Node3D" unique_id=284832707]
+script = ExtResource("1_4hg5e")
+
+[node name="bisagra" type="Node3D" parent="." unique_id=417239136]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="bisagra" unique_id=1679470365]
+transform = Transform3D(0.75, 0, 0, 0, 0.1, 0, 0, 0, 0.75, 0, -0.4, -0.001)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="bisagra" unique_id=1942216075]
+transform = Transform3D(0.1, 0, 0, 0, 0.7, 0, 0, 0, 0.1, 0.315, -0.75, 0.314)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="bisagra" unique_id=1263612798]
+transform = Transform3D(0.1, 0, 0, 0, 0.7, 0, 0, 0, 0.1, -0.315, -0.75, 0.314)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="bisagra" unique_id=238126456]
+transform = Transform3D(0.1, 0, 0, 0, 0.7, 0, 0, 0, 0.1, -0.315, -0.75, -0.316)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="bisagra" unique_id=1476842826]
+transform = Transform3D(0.1, 0, 0, 0, 0.7, 0, 0, 0, 0.1, 0.315, -0.75, -0.316)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="bisagra" unique_id=1260782334]
+transform = Transform3D(0.1, 0, 0, 0, 0.7347423, 0, 0, 0, 0.1, 0.325, 0.015, 0.324)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="bisagra" unique_id=1479637350]
+transform = Transform3D(0.1, 0, 0, 0, 0.7194087, 0, 0, 0, 0.025, -0.1, -0.002, 0.324)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="bisagra" unique_id=1690990692]
+transform = Transform3D(0.8, 0, 0, 0, 0.1, 0, 0, 0, 0.15, 0, 0.35, 0.324)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="bisagra" unique_id=1356945141]
+transform = Transform3D(0.1, 0, 0, 0, 0.7218609, 0, 0, 0, 0.1, -0.32516408, -0.005122876, 0.32421792)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="bisagra" unique_id=915459961]
+transform = Transform3D(0.1, 0, 0, 0, 0.7156384, 0, 0, 0, 0.025, 0.09952241, 0.0012232903, 0.32421792)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="bisagra" unique_id=1837504964]
+transform = Transform3D(0.77, 0, 0, 0, 0.026, 0, 0, 0, 0.77, 0, -0.35, -0.001)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="bisagra" unique_id=394321456]
+transform = Transform3D(1.9106853e-16, 2.4041263e-08, 0.025, 0.1, -2.4041263e-08, 3.3087225e-24, 4.371139e-09, 0.55, -1.0927848e-09, 0.32454628, -0.85, -0.00078213215)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="bisagra" unique_id=806095642]
+transform = Transform3D(1.9106853e-16, 2.4041263e-08, 0.025, 0.1, -2.4041263e-08, 3.3087225e-24, 4.371139e-09, 0.55, -1.0927848e-09, -0.325, -0.85, -0.001)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="bisagra" unique_id=1596506043]
+transform = Transform3D(-4.371139e-09, -0.55, 0, 0.1, -2.4041263e-08, 0, 0, 0, 0.025, 0, -0.65, -0.337)
+material_override = ExtResource("1_gknmx")
+mesh = SubResource("BoxMesh_qnjkh")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="bisagra" unique_id=1520646465]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bisagra/StaticBody3D" unique_id=1395855071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009170532, -0.346698, 0)
+shape = SubResource("BoxShape3D_6ixev")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=739464217]
+libraries/ = SubResource("AnimationLibrary_omg4a")

@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://bkoxeqtevdkyn"]
+
+[ext_resource type="Texture2D" uid="uid://boo614d4ven0b" path="res://texturas_y_materiales/laminate_floor_02_1k/textures/laminate_floor_02_diff_1k.png" id="1_3sjx7"]
+[ext_resource type="Texture2D" uid="uid://b5mambv2hpjxq" path="res://texturas_y_materiales/laminate_floor_02_1k/textures/laminate_floor_02_ao_1k.png" id="2_q63ra"]
+[ext_resource type="Texture2D" uid="uid://2npecs21ewh7" path="res://texturas_y_materiales/laminate_floor_02_1k/textures/laminate_floor_02_disp_1k.png" id="3_qreoh"]
+[ext_resource type="Texture2D" uid="uid://ce7ux2o1y5ugx" path="res://texturas_y_materiales/laminate_floor_02_1k/textures/laminate_floor_02_nor_gl_1k.png" id="4_uhn5v"]
+[ext_resource type="Texture2D" uid="uid://du03v23v0pxb5" path="res://texturas_y_materiales/laminate_floor_02_1k/textures/laminate_floor_02_rough_1k.png" id="5_3w24r"]
+
+[resource]
+albedo_texture = ExtResource("1_3sjx7")
+roughness = 0.85
+roughness_texture = ExtResource("5_3w24r")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("4_uhn5v")
+ao_enabled = true
+ao_light_affect = 0.5
+ao_texture = ExtResource("2_q63ra")
+heightmap_enabled = true
+heightmap_scale = 0.0
+heightmap_texture = ExtResource("3_qreoh")
+uv1_scale = Vector3(15.76, 15.76, 15.76)
+uv1_offset = Vector3(0.48, 0, 0)
