@@ -32,8 +32,17 @@
 [ext_resource type="PackedScene" uid="uid://b87ooj7n4odbr" path="res://escenario/porton.tscn" id="27_d6v2m"]
 [ext_resource type="PackedScene" uid="uid://ckt4an3lmhano" path="res://escenario/luz.tscn" id="28_e24qt"]
 [ext_resource type="PackedScene" uid="uid://c7us37twoj7ga" path="res://escenario/interruptor_luz.tscn" id="33_tgurs"]
-[ext_resource type="PackedScene" uid="uid://voqbqypbqw7y" path="res://escenario/muebles/mueble_cocina_mod_1.scn" id="34_oq0ix"]
-[ext_resource type="PackedScene" uid="uid://djnorxhl8psy4" path="res://escenario/muebles/mueble_cocina_mod_2.scn" id="34_wakjn"]
+[ext_resource type="PackedScene" uid="uid://c65bp36ewfixv" path="res://escenario/muebles/mueble_cocina_mod_2.scn" id="34_wakjn"]
+[ext_resource type="PackedScene" uid="uid://dpcc3dspdwu5i" path="res://escenario/muebles/mueble_cocina_mod_esq.scn" id="35_oq0ix"]
+[ext_resource type="PackedScene" uid="uid://bmwotpldabxul" path="res://escenario/muebles/mueble_cocina_mod_1.tscn" id="35_xqlyd"]
+[ext_resource type="PackedScene" uid="uid://di27prhyb8qws" path="res://escenario/muebles/mueble_soporte.scn" id="36_xqlyd"]
+[ext_resource type="PackedScene" uid="uid://bsjb7bfwqxber" path="res://escenario/television.scn" id="37_ics4w"]
+[ext_resource type="PackedScene" uid="uid://byt3adxx44kmt" path="res://escenario/muebles/heladera.scn" id="38_f6xa5"]
+[ext_resource type="PackedScene" uid="uid://c7tf876igcqal" path="res://escenario/muebles/mueble_cocina_mod_3_sup.scn" id="39_ssvfi"]
+[ext_resource type="PackedScene" uid="uid://bnxfa4whl37ba" path="res://escenario/luz_cocina.scn" id="40_q4guu"]
+[ext_resource type="PackedScene" uid="uid://cb4v7dtow6amq" path="res://escenario/muebles/mueble_sup_esq.scn" id="41_3j3t4"]
+[ext_resource type="PackedScene" uid="uid://dfpvmdumks2da" path="res://escenario/cocina.scn" id="42_unt0i"]
+[ext_resource type="PackedScene" uid="uid://bdv12jut5cu8h" path="res://escenario/extractor.scn" id="43_3gybg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b7i1y"]
 
@@ -1854,7 +1863,7 @@ transform = Transform3D(0.16866288, 0, -2.2436695, 0, 2.25, 0, 2.2436695, 0, 0.1
 transform = Transform3D(-0.14069086, 0, -2.2455971, 0, 2.25, 0, 2.2455971, 0, -0.14069086, 17.104263, -2.019, -16.592983)
 
 [node name="sillon" parent="Muebles" unique_id=520534534 instance=ExtResource("18_mcidh")]
-transform = Transform3D(1.7484555e-07, -3.496911e-07, 4, 0, 4, 3.496911e-07, 4, 1.5285484e-14, -1.7484555e-07, -0.75, -4.5, -21.25)
+transform = Transform3D(1.7484555e-07, -3.496911e-07, 4, 0, 4, 3.496911e-07, 4, 1.5285484e-14, -1.7484555e-07, -0.75, -4.6209016, -21.25)
 
 [node name="Set of pictures2" parent="Muebles" unique_id=1930082961 instance=ExtResource("19_lb2k3")]
 transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, -4.5, 2, -21.25)
@@ -1919,11 +1928,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 0, -20)
 [node name="porton" parent="Muebles" unique_id=926241766 instance=ExtResource("27_d6v2m")]
 transform = Transform3D(1.05, 0, 0, 0, 0.785, 0, 0, 0, 1, 12.5, 0.14207983, 30)
 
-[node name="mueble_cocina_mod_1" parent="Muebles" unique_id=755770107 instance=ExtResource("34_oq0ix")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.55, -2.8, -8.067095)
+[node name="mueble_cocina_mod_1" parent="Muebles" unique_id=505353020 instance=ExtResource("35_xqlyd")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.575, -2.81, -9.6)
 
-[node name="mueble_cocina_mod_2" parent="Muebles" unique_id=111453361 instance=ExtResource("34_wakjn")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.55, -2.8, -5.468368)
+[node name="mueble_cocina_mod_esq" parent="Muebles" unique_id=1831392747 instance=ExtResource("35_oq0ix")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.575, -2.81, -1.8)
+
+[node name="mueble_cocina_mod_3" parent="Muebles" unique_id=603167409 instance=ExtResource("35_xqlyd")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 20.585709, -2.81, -1.41)
+
+[node name="mueble_cocina_mod_2" parent="Muebles" unique_id=526039511 instance=ExtResource("34_wakjn")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.575, -2.81, -4.4)
+
+[node name="mueble_soporte" parent="Muebles" unique_id=1359497690 instance=ExtResource("36_xqlyd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2368898, -3.4968238, -12.059308)
+
+[node name="television" parent="Muebles" unique_id=1508574 instance=ExtResource("37_ics4w")]
+transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 6.700304, 0.5, -21.2)
+
+[node name="mueble_cocina_mod_3_sup" parent="Muebles" unique_id=777018474 instance=ExtResource("39_ssvfi")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.575, 3.35, -9.6)
+
+[node name="mueble_cocina_mod_3_sup2" parent="Muebles" unique_id=998858655 instance=ExtResource("39_ssvfi")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.575, 3.35, -4.4)
+
+[node name="luz_cocina" parent="Muebles" unique_id=949001407 instance=ExtResource("40_q4guu")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.575, 3.01, -7.044)
+
+[node name="mueble_cocina_mod_3_sup3" parent="Muebles" unique_id=1969025129 instance=ExtResource("39_ssvfi")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 20.586, 3.35, -1.41)
+
+[node name="heladera" parent="Muebles" unique_id=696548354 instance=ExtResource("38_f6xa5")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, 17.75, -1.12, -1.633)
+
+[node name="mueble_sup_esq" parent="Muebles" unique_id=1652112112 instance=ExtResource("41_3j3t4")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.575, 3.35, -1.8)
+
+[node name="cocina" parent="Muebles" unique_id=1189101327 instance=ExtResource("42_unt0i")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.575, -2.81, -7)
+
+[node name="extractor" parent="Muebles" unique_id=1487569355 instance=ExtResource("43_3gybg")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 23.575, 0.425, -7)
+
+[node name="mueble_cocina_mod_4" parent="Muebles" unique_id=1110052158 instance=ExtResource("35_xqlyd")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 14.94, -2.81, -1.41)
+
+[node name="mueble_cocina_mod_3_sup4" parent="Muebles" unique_id=1737421988 instance=ExtResource("39_ssvfi")]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, 14.94, 3.35, -1.41)
 
 [node name="interruptores_luz" type="Node3D" parent="." unique_id=1197152412]
 
@@ -1954,3 +2005,37 @@ light_bulb_2 = NodePath("../../Luces/luz5")
 [node name="interruptor_luz6" parent="interruptores_luz" unique_id=209646757 node_paths=PackedStringArray("light_bulb") instance=ExtResource("33_tgurs")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 6.3761673, -0.225, 0.51284087)
 light_bulb = NodePath("../../Luces/luz16")
+
+[node name="interruptor_luz7" parent="interruptores_luz" unique_id=478404562 node_paths=PackedStringArray("light_bulb", "light_bulb_2") instance=ExtResource("33_tgurs")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 8.019754, -0.225, -12.167143)
+light_bulb = NodePath("../../Luces/luz17")
+light_bulb_2 = NodePath("../../Luces/luz18")
+
+[node name="interruptor_luz8" parent="interruptores_luz" unique_id=1041710730 node_paths=PackedStringArray("light_bulb", "light_bulb_2") instance=ExtResource("33_tgurs")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 17.558954, -0.225, -29.482948)
+light_bulb = NodePath("../../Luces/luz5")
+light_bulb_2 = NodePath("../../Luces/luz4")
+
+[node name="interruptor_luz9" parent="interruptores_luz" unique_id=413373022 node_paths=PackedStringArray("light_bulb") instance=ExtResource("33_tgurs")]
+transform = Transform3D(-1.5, 0, 1.3113416e-07, 0, 1.5, 0, -1.3113416e-07, 0, -1.5, -10.249428, -0.225, -0.5131285)
+light_bulb = NodePath("../../Luces/luz6")
+
+[node name="interruptor_luz10" parent="interruptores_luz" unique_id=302105298 node_paths=PackedStringArray("light_bulb") instance=ExtResource("33_tgurs")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, -10.512057, -0.225, 5.4111686)
+light_bulb = NodePath("../../Luces/luz15")
+
+[node name="interruptor_luz11" parent="interruptores_luz" unique_id=253018536 node_paths=PackedStringArray("light_bulb") instance=ExtResource("33_tgurs")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, -15.518601, -0.225, 20.067099)
+light_bulb = NodePath("../../Luces/luz9")
+
+[node name="interruptor_luz12" parent="interruptores_luz" unique_id=1174854862 node_paths=PackedStringArray("light_bulb") instance=ExtResource("33_tgurs")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, -5.521631, -0.225, 21.473536)
+light_bulb = NodePath("../../Luces/luz10")
+
+[node name="interruptor_luz13" parent="interruptores_luz" unique_id=693293986 node_paths=PackedStringArray("light_bulb") instance=ExtResource("33_tgurs")]
+transform = Transform3D(-1.5, 0, 1.3113416e-07, 0, 1.5, 0, -1.3113416e-07, 0, -1.5, -12.3230505, -0.225, -20.519844)
+light_bulb = NodePath("../../Luces/luz8")
+
+[node name="interruptor_luz14" parent="interruptores_luz" unique_id=1934659157 node_paths=PackedStringArray("light_bulb") instance=ExtResource("33_tgurs")]
+transform = Transform3D(-1.5, 0, 1.3113416e-07, 0, 1.5, 0, -1.3113416e-07, 0, -1.5, -19.967247, -0.225, -20.519844)
+light_bulb = NodePath("../../Luces/luz7")

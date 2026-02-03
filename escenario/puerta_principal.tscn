@@ -1,8 +1,12 @@
 [gd_scene format=4 uid="uid://br0cm7aslyn1n"]
 
 [ext_resource type="Script" uid="uid://d2uqqhm8pejpu" path="res://scripts/puerta_principal.gd" id="1_71pru"]
-[ext_resource type="Material" uid="uid://c1i0rsn3lk81v" path="res://texturas_y_materiales/Metal061A_1K-JPG/Metal061A_1K-JPG.tres" id="2_71pru"]
-[ext_resource type="Material" uid="uid://clvvm1584stcg" path="res://texturas_y_materiales/wood_floor_worn_1k/textures/wood_floor_worn_1k.tres" id="3_fl1fh"]
+[ext_resource type="Material" uid="uid://clvvm1584stcg" path="res://texturas_y_materiales/wood_floor_worn_1k_porton/textures/wood_floor_worn_1k.tres" id="3_fl1fh"]
+[ext_resource type="Texture2D" uid="uid://cgaderu8hallr" path="res://texturas_y_materiales/Metal061A_1K-JPG/Metal061A_1K-JPG_Color.jpg" id="3_vit4e"]
+[ext_resource type="Texture2D" uid="uid://cvip0ri3ugj5x" path="res://texturas_y_materiales/Metal061A_1K-JPG/Metal061A_1K-JPG_Displacement.jpg" id="4_d7oys"]
+[ext_resource type="Texture2D" uid="uid://udsk06810xl4" path="res://texturas_y_materiales/Metal061A_1K-JPG/Metal061A_1K-JPG_Metalness.jpg" id="5_j8wsp"]
+[ext_resource type="Texture2D" uid="uid://dou02mjto67lm" path="res://texturas_y_materiales/Metal061A_1K-JPG/Metal061A_1K-JPG_NormalGL.jpg" id="6_tidxs"]
+[ext_resource type="Texture2D" uid="uid://d0rpyfh8qfdl1" path="res://texturas_y_materiales/Metal061A_1K-JPG/Metal061A_1K-JPG_Roughness.jpg" id="7_l0p0g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1651n"]
 
@@ -103,6 +107,19 @@ shadow_mesh = SubResource("ArrayMesh_byijm")
 [sub_resource type="BoxShape3D" id="BoxShape3D_0ocfb"]
 size = Vector3(3.2993774, 8.299561, 0.5185547)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfxm5"]
+albedo_texture = ExtResource("3_vit4e")
+metallic = 0.75
+metallic_texture = ExtResource("5_j8wsp")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("7_l0p0g")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("6_tidxs")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("4_d7oys")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilgl7"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_enwl6"]
@@ -136,6 +153,19 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_enwl6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3asav"]
+albedo_texture = ExtResource("3_vit4e")
+metallic = 0.75
+metallic_texture = ExtResource("5_j8wsp")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("7_l0p0g")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("6_tidxs")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("4_d7oys")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_prjps"]
 
@@ -171,6 +201,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hjagj")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h84nl"]
+albedo_texture = ExtResource("3_vit4e")
+metallic = 0.75
+metallic_texture = ExtResource("5_j8wsp")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("7_l0p0g")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("6_tidxs")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("4_d7oys")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktcc7"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_c43t5"]
@@ -204,6 +247,19 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_c43t5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlj74"]
+albedo_texture = ExtResource("3_vit4e")
+metallic = 0.75
+metallic_texture = ExtResource("5_j8wsp")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("7_l0p0g")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("6_tidxs")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("4_d7oys")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7kxx"]
 
@@ -347,7 +403,7 @@ skeleton = NodePath("")
 [node name="Node3D" type="Node3D" parent="." unique_id=1765344225]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7497585, 0, 0)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Node3D" unique_id=1518193422]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Node3D" unique_id=1518193422 groups=["interactuables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7497585, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D2" unique_id=927023552]
@@ -356,25 +412,25 @@ shape = SubResource("BoxShape3D_0ocfb")
 
 [node name="Cylinder_003" type="MeshInstance3D" parent="Node3D" unique_id=1901374781]
 transform = Transform3D(0.1, 0, 0, 0, 1.5, 0, 0, 0, 0.1, -3.0997586, -0.315, -0.4)
-material_override = ExtResource("2_71pru")
+material_override = SubResource("StandardMaterial3D_sfxm5")
 mesh = SubResource("ArrayMesh_bserb")
 skeleton = NodePath("")
 
 [node name="Cylinder_002" type="MeshInstance3D" parent="Node3D" unique_id=1782946881]
 transform = Transform3D(0.1, 0, 0, 0, 1.5, 0, 0, 0, 0.1, -3.0997586, -0.315, 0.4)
-material_override = ExtResource("2_71pru")
+material_override = SubResource("StandardMaterial3D_3asav")
 mesh = SubResource("ArrayMesh_ma61u")
 skeleton = NodePath("")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="Node3D" unique_id=751065302]
 transform = Transform3D(0.075, 0, 0, 0, 0, -0.075, 0, 0.4, 0, -3.0997586, -1.315, 0)
-material_override = ExtResource("2_71pru")
+material_override = SubResource("StandardMaterial3D_h84nl")
 mesh = SubResource("ArrayMesh_f8d4t")
 skeleton = NodePath("")
 
 [node name="Cylinder" type="MeshInstance3D" parent="Node3D" unique_id=629265931]
 transform = Transform3D(0.075, 0, 0, 0, 0, -0.075, 0, 0.4, 0, -3.0997586, 0.685, 0)
-material_override = ExtResource("2_71pru")
+material_override = SubResource("StandardMaterial3D_qlj74")
 mesh = SubResource("ArrayMesh_fsmyj")
 skeleton = NodePath("")
 

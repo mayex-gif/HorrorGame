@@ -10,10 +10,10 @@ func interactuar(parte: String):
 		return
 			
 	match parte:
-		"mueble_cocina_mod_1":
+		"puerta":
 			if not puertas_abiertas:
 				anim_player.play("abrir")
 				puertas_abiertas = true
 			else:
-				anim_player.play("cerrar")
+				anim_player.play_backwards("abrir")
 				puertas_abiertas = false

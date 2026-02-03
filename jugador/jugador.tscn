@@ -15,7 +15,7 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[node name="Jugador" type="CharacterBody3D" unique_id=459916517]
+[node name="Jugador" type="CharacterBody3D" unique_id=459916517 groups=["jugador"]]
 script = ExtResource("1_feffl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=558247350]
@@ -31,8 +31,7 @@ script = ExtResource("2_ug00j")
 [node name="Camera3D" type="Camera3D" parent="Cabeza" unique_id=1726565832]
 
 [node name="RayCast3D" type="RayCast3D" parent="Cabeza" unique_id=1072499919]
-transform = Transform3D(1.5, 0, 0, 0, -6.556708e-08, -1.5, 0, 1.5, -6.556708e-08, 0, 0, 0)
-target_position = Vector3(0, -2, 0)
+target_position = Vector3(0, 0, -2)
 script = ExtResource("3_sx3nn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=28853390]

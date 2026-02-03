@@ -359,7 +359,7 @@ skeleton = NodePath("")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=818950681]
 libraries/ = SubResource("AnimationLibrary_qnppq")
 
-[node name="ventana" type="StaticBody3D" parent="." unique_id=774772755]
+[node name="ventana" type="StaticBody3D" parent="." unique_id=774772755 groups=["interactuables"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ventana" unique_id=1228026140]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055236816, 0.0008392334, 0.024475098)

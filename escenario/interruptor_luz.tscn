@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0vw16f83j0gm" path="res://scripts/interruptor_luz.gd" id="1_iu8tr"]
 [ext_resource type="Material" uid="uid://c1i0rsn3lk81v" path="res://texturas_y_materiales/Metal061A_1K-JPG/Metal061A_1K-JPG.tres" id="3_ks4uu"]
-[ext_resource type="Material" uid="uid://co3uh0hx27v8v" path="res://texturas_y_materiales/Wallpaper001A_1K-JPG-beige/Wallpaper001A_1K-JPG.tres" id="3_wh8or"]
-[ext_resource type="Material" uid="uid://co3uh0hx27v8v" path="res://texturas_y_materiales/Wallpaper001A_1K-JPG/Wallpaper001A_1K-JPG.tres" id="4_wh8or"]
+[ext_resource type="Material" uid="uid://co3uh0hx27v8v" path="res://texturas_y_materiales/Wallpaper001A_1K-JPG-techo/Wallpaper001A_1K-JPG.tres" id="4_wh8or"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dee3e"]
 
@@ -170,7 +169,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kiubs")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ks4uu"]
-size = Vector3(0.42739487, 0.5520325, 0.038017273)
+size = Vector3(0.24635649, 0.4053421, 0.02828598)
 
 [sub_resource type="Animation" id="Animation_iu8tr"]
 length = 0.001
@@ -231,13 +230,13 @@ script = ExtResource("1_iu8tr")
 
 [node name="Cube" type="MeshInstance3D" parent="." unique_id=492969923]
 transform = Transform3D(0.125, 0, 0, 0, 0.2, 0, 0, 0, 0.01, 0, 0, 0)
-material_override = ExtResource("3_wh8or")
+material_override = ExtResource("4_wh8or")
 mesh = SubResource("ArrayMesh_10dbd")
 skeleton = NodePath("")
 
 [node name="Cube_001" type="MeshInstance3D" parent="." unique_id=993222932]
 transform = Transform3D(0.105, 0, 0, 0, 0.19, 0, 0, 0, 0.01, 0, 0, -0.02)
-material_override = ExtResource("3_wh8or")
+material_override = ExtResource("4_wh8or")
 mesh = SubResource("ArrayMesh_1ruj4")
 skeleton = NodePath("")
 
@@ -254,7 +253,7 @@ mesh = SubResource("ArrayMesh_fxy71")
 skeleton = NodePath("")
 
 [node name="bisagra" type="Node3D" parent="." unique_id=1095134673]
-transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.9848077, 0, 0, 0)
+transform = Transform3D(0.9848076, 0, 0.17364816, 0, 1, 0, -0.17364816, 0, 0.9848076, 0, 0, 0)
 
 [node name="Cube_003" type="MeshInstance3D" parent="bisagra" unique_id=1769297972]
 transform = Transform3D(0.085, 0, 0, 0, 0.15, 0, 0, 0, 0.02, 0, 0, 0.01)
@@ -262,10 +261,10 @@ material_override = ExtResource("4_wh8or")
 mesh = SubResource("ArrayMesh_0skx7")
 skeleton = NodePath("")
 
-[node name="interruptor_luz" type="StaticBody3D" parent="." unique_id=177709018]
+[node name="interruptor_luz" type="StaticBody3D" parent="." unique_id=177709018 groups=["interactuables"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="interruptor_luz" unique_id=1602046684]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00217247, -0.016555786, 0.0027593076)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0033299923, 0.0029411316, -0.0021063387)
 shape = SubResource("BoxShape3D_ks4uu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=744749274]

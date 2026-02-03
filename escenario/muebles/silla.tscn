@@ -149,7 +149,7 @@ material_override = ExtResource("1_gknmx")
 mesh = SubResource("BoxMesh_qnjkh")
 skeleton = NodePath("../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="bisagra" unique_id=1520646465]
+[node name="StaticBody3D" type="StaticBody3D" parent="bisagra" unique_id=1520646465 groups=["interactuables"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bisagra/StaticBody3D" unique_id=1395855071]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009170532, -0.346698, 0)

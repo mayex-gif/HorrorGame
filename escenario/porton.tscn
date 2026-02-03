@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://b87ooj7n4odbr"]
 
 [ext_resource type="Script" uid="uid://i5fh8ytwofqa" path="res://scripts/porton.gd" id="1_ctcom"]
-[ext_resource type="Material" uid="uid://clvvm1584stcg" path="res://texturas_y_materiales/wood_floor_worn_1k/textures/wood_floor_worn_1k.tres" id="3_ctcom"]
 [ext_resource type="Material" uid="uid://clvvm1584stcg" path="res://texturas_y_materiales/wood_floor_worn_1k_porton/textures/wood_floor_worn_1k.tres" id="3_nt0ka"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1agnp"]
@@ -230,25 +229,25 @@ script = ExtResource("1_ctcom")
 
 [node name="Cube_011" type="MeshInstance3D" parent="." unique_id=1872528338]
 transform = Transform3D(0, 0, 9.7, 0, 6.25, 0, -0.01, 0, 0, 0, -0.025, 0.5)
-material_override = ExtResource("3_ctcom")
+material_override = ExtResource("3_nt0ka")
 mesh = SubResource("ArrayMesh_l133n")
 skeleton = NodePath("")
 
 [node name="Cube_010" type="MeshInstance3D" parent="." unique_id=518699778]
 transform = Transform3D(0, 0, 9.7, 0, 6.25, 0, -0.01, 0, 0, 0, 0, -0.5)
-material_override = ExtResource("3_ctcom")
+material_override = ExtResource("3_nt0ka")
 mesh = SubResource("ArrayMesh_7brlr")
 skeleton = NodePath("")
 
 [node name="Cube_008" type="MeshInstance3D" parent="." unique_id=1622088051]
 transform = Transform3D(0, 0, 9.5, 0, 6, 0, -0.5, 0, 0, 0, 0.05, 0)
-material_override = ExtResource("3_ctcom")
+material_override = ExtResource("3_nt0ka")
 mesh = SubResource("ArrayMesh_1nhcy")
 skeleton = NodePath("")
 
 [node name="bisagra" type="Node3D" parent="." unique_id=508825731]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="bisagra" unique_id=812767476]
+[node name="StaticBody3D" type="StaticBody3D" parent="bisagra" unique_id=812767476 groups=["interactuables"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bisagra/StaticBody3D" unique_id=1771026881]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00048828125, 0.002105713, -0.001373291)

@@ -165,3 +165,4 @@ light_energy = 0.5
 shadow_enabled = true
 shadow_blur = 10.0
 distance_fade_enabled = true
+omni_range = 8.0
